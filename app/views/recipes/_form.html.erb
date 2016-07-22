@@ -1,0 +1,65 @@
+<%= form_for(@recipe) do |f| %>
+  <% if @recipe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+
+      <ul>
+      <% @recipe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :recipe_name %><br>
+    <%= f.text_field :recipe_name %>
+  </div>
+  <div class="field">
+    <%= f.label :ingredient_id %><br>
+    <%= f.number_field :ingredient_id %>
+  </div>
+  <div class="field">
+    <%= f.label :recipe_level %><br>
+    <%= f.number_field :recipe_level %>
+  </div>
+  <div class="field">
+    <%= f.label :recipte_progress %><br>
+    <%= f.number_field :recipte_progress %>
+  </div>
+  <div class="field">
+    <%= f.label :recipe_difficulty %><br>
+    <%= f.number_field :recipe_difficulty %>
+  </div>
+  <div class="field">
+    <%= f.label :recipe_quality %><br>
+    <%= f.number_field :recipe_quality %>
+  </div>
+  <div class="field">
+    <%= f.label :recipe_durability %><br>
+    <%= f.number_field :recipe_durability %>
+  </div>
+  <div class="field">
+    <%= f.label :recipe_yield %><br>
+    <%= f.number_field :recipe_yield %>
+  </div>
+  <div class="field">
+    <%= f.label :quick_synth %><br>
+    <%= f.check_box :quick_synth %>
+  </div>
+  <div class="field">
+    <%= f.label :control_requirement %><br>
+    <%= f.number_field :control_requirement %>
+  </div>
+  <div class="field">
+    <%= f.label :craft_requirement %><br>
+    <%= f.number_field :craft_requirement %>
+  </div>
+  <div class="field">
+    <%= f.label :specialist %><br>
+    <%= f.check_box :specialist %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

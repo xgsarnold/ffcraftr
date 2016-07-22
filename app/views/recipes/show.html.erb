@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Recipe name:</strong>
+  <%= @recipe.recipe_name %>
+</p>
+
+<p>
+  <strong>Ingredient:</strong>
+  <%= @recipe.ingredient_id %>
+</p>
+
+<p>
+  <strong>Recipe level:</strong>
+  <%= @recipe.recipe_level %>
+</p>
+
+<p>
+  <strong>Recipte progress:</strong>
+  <%= @recipe.recipte_progress %>
+</p>
+
+<p>
+  <strong>Recipe difficulty:</strong>
+  <%= @recipe.recipe_difficulty %>
+</p>
+
+<p>
+  <strong>Recipe quality:</strong>
+  <%= @recipe.recipe_quality %>
+</p>
+
+<p>
+  <strong>Recipe durability:</strong>
+  <%= @recipe.recipe_durability %>
+</p>
+
+<p>
+  <strong>Recipe yield:</strong>
+  <%= @recipe.recipe_yield %>
+</p>
+
+<p>
+  <strong>Quick synth:</strong>
+  <%= @recipe.quick_synth %>
+</p>
+
+<p>
+  <strong>Control requirement:</strong>
+  <%= @recipe.control_requirement %>
+</p>
+
+<p>
+  <strong>Craft requirement:</strong>
+  <%= @recipe.craft_requirement %>
+</p>
+
+<p>
+  <strong>Specialist:</strong>
+  <%= @recipe.specialist %>
+</p>
+
+<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+<%= link_to 'Back', recipes_path %>
